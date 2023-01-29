@@ -14,3 +14,7 @@ if (number % 2 == 1)
 {
     Console.WriteLine(number + " - odd number");
 }
+if (number % 2 == -1)
+{
+    Console.WriteLine(number + " - odd number");
+}
