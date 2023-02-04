@@ -6,6 +6,5 @@
 Console.Clear();
 Console.Write("Введите трёхзначное число: ");
 int num = int.Parse(Console.ReadLine());
-int a1 = num / 10;
-int a2 = a1 % 10;
-Console.Write($"Вторая цифра в числе: {a2}");
+int a1 = (num / 10) % 10;
+Console.Write($"Вторая цифра в числе: {a1}");
