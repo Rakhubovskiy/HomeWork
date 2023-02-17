@@ -7,36 +7,14 @@ double[] array = new double[5];
 FillArray(array);
 PrintArray(array);
 Console.WriteLine();
-double max = 0;
-foreach (double el in array)
-{
-    if (el > max)
-    {
-        max = el;
-    }
-}
-Console.Write(max);
-Console.WriteLine();
-double min = max;
-foreach (double el in array)
-{
-    if (el < min)
-    {
-        min = el;
-    }
-}
-Console.Write(min);
-Console.WriteLine();
-Console.Write($"Разница между максимальным и минимальным элементом массива: {max - min}");
-
-
+Console.Write($"Разница между максимальным и минимальным элетментами массива: {DiffArray(array)}");
 
 void FillArray(double[] fillArray)
 {
     int length = fillArray.Length;
     for (int index = 0; index < length; index++)
     {
-        fillArray[index] = new Random().Next(1, 100);
+        fillArray[index] = new Random().NextDouble() * 100;
     }
 }
 
@@ -47,4 +25,22 @@ void PrintArray(double[] printArray)
     {
         Console.Write($"{printArray[index]} ");
     }
+}
+
+double DiffArray(double[] diffArray)
+{
+    double min = diffArray[0];
+    double max = diffArray[0];
+    foreach (double el in diffArray)
+    {
+        if (min > el)
+        {
+            min = el;
+        }
+        if (max < el)
+        {
+            max = el;
+        }
+    }
+    return max - min;
 }
