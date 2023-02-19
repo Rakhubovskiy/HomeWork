@@ -14,7 +14,7 @@ void FillArray(double[] fillArray)
     int length = fillArray.Length;
     for (int index = 0; index < length; index++)
     {
-        fillArray[index] = new Random().NextDouble() * 100;
+        fillArray[index] = Math.Round((new Random().NextDouble()), 1) + new Random().Next(-10, 10);
     }
 }
 
